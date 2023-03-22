@@ -1,11 +1,12 @@
+// Ike MElanson
+
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import data from './data/teamData.json';
-// const data = require('./data/teamData.json');
+// imoprt data
 const data = require('./data/teamData.json');
 const teamData = data.teams;
 
+// make a Team class that implements one card of team data
 class Team extends React.Component<{
   school: string;
   name: string;
@@ -15,6 +16,7 @@ class Team extends React.Component<{
   render() {
     const team = this.props;
 
+    // return the DOM node
     return (
       <div className="card">
         <h2>{team.school}</h2>
@@ -27,6 +29,7 @@ class Team extends React.Component<{
   }
 }
 
+// a function to make a list of the teams
 function TeamList() {
   return (
     <div className="card-container">
@@ -37,6 +40,7 @@ function TeamList() {
   );
 }
 
+// make the whole app
 function App() {
   return (
     <div className="App">
